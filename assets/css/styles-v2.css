@@ -120,12 +120,12 @@ body {
   }
   
   a {
-    color: #5e70ed;
+    color: #002873;
     font-weight: bold;
   }
   
   a:hover {
-    color: #dedede;
+    color: #000;
     text-decoration: none;
   }
   
