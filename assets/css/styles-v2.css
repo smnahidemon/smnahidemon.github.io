@@ -120,7 +120,8 @@ body {
   }
   
   a {
-    color: #3c3b3b;
+    color: #5e70ed;
+    font-weight: bold;
   }
   
   a:hover {
