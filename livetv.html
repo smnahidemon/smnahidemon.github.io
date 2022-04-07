@@ -3,40 +3,95 @@
 <html>
 	<head>
 	<title>Live TV | ICC Communication</title>   
-	<link rel="shortcut icon" href="images/icc.ico" />	
-		<script data-cfasync="false" src="https://content.jwplatform.com/libraries/wB8onOoh.js"></script>
-		</script>
-				
-		<style type="text/css">
-			html, body {
-				height: 100%;
-				width: 100%;
-				padding: 0;
-				margin: 0;
-			}
-			#player {
-				height: 100%;
-				width: 100%; 
-				padding: 0;
-			}
-		</style>
+	<style>
+ @media screen and (min-width: 200px) and (max-width: 567px) and (orientation: landscape) {
+ html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 767px){
+.sticky {
+  top: 0px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  right: 0px;
+  position: fixed;
+  width: 50%;
+  z-index: 1;
+background-color: black;
+border: 1px solid white;
+text-align: center;
+padding-right:24.5%;
+padding-left:24.5%;
+}}
+@media screen and (min-width: 768px) and (max-width: 1000px){
+.sticky {
+  top: 0px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 80%;
+  right: 10px;
+  width: 20%;
+  z-index: 1;
+background-color: black;
+border: 1px solid white;
+text-align: center;
+padding-right:0%;
+padding-left:0%;
+}}
+</style>
 	</head>
 	<body>
-	<div id="iccjwplayer">
-	</div>
-		<script type="text/javascript">
-			jwplayer("iccjwplayer").setup({
-				file: "http://10.16.100.203:8082/bangla/tv_AsiaN.m3u8",
-				
-				image: "http://10.16.100.203:8082/img/asian.png",
-				aboutlink: 'http://10.16.100.244',
-				controls: 'true',
-				height: "100%",
-				width: "100%",
-				stretching: "exactfit",
-				flashplayer:"//cdn.jsdelivr.net/jwplayer/5.10/player.swf"
-				
-			});
-		</script>
+<div class="" id="myHeader">
+<div id="http">
+<script src="//content.jwplatform.com/libraries/IDzF9Zmk.js"></script>
+<div id="player">
+</div>
+<script type="text/javascript">
+    jwplayer('player').setup({
+        file: 'https://timesnow-lh.akamaihd.net/i/TNHD_1@129288/master.m3u8',
+playbackRateControls: [0.75, 1, 1.25, 1.5],
+        title: 'live tv',
+        width: '100%',
+        aspectratio: '16:9',
+        mute: false,
+        repeat: 'true',
+        autostart: true,
+        primary: 'html5',
+        type: 'm3u8',
+        setFullscreen: true,
+controls: true,
+showCode: true,
+skin: {
+  name: "glow",
+       active: "red",
+       inactive: "",
+       background: ""
+  }
+    });
+</script>
+</div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 	</body>
 </html>
