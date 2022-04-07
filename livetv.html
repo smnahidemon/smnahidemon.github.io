@@ -1,0 +1,42 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<title>Live TV | ICC Communication</title>   
+	<link rel="shortcut icon" href="images/icc.ico" />	
+		<script data-cfasync="false" src="https://content.jwplatform.com/libraries/wB8onOoh.js"></script>
+		</script>
+				
+		<style type="text/css">
+			html, body {
+				height: 100%;
+				width: 100%;
+				padding: 0;
+				margin: 0;
+			}
+			#player {
+				height: 100%;
+				width: 100%; 
+				padding: 0;
+			}
+		</style>
+	</head>
+	<body>
+	<div id="iccjwplayer">
+	</div>
+		<script type="text/javascript">
+			jwplayer("iccjwplayer").setup({
+				file: "http://10.16.100.203:8082/bangla/tv_AsiaN.m3u8",
+				
+				image: "http://10.16.100.203:8082/img/asian.png",
+				aboutlink: 'http://10.16.100.244',
+				controls: 'true',
+				height: "100%",
+				width: "100%",
+				stretching: "exactfit",
+				flashplayer:"//cdn.jsdelivr.net/jwplayer/5.10/player.swf"
+				
+			});
+		</script>
+	</body>
+</html>
